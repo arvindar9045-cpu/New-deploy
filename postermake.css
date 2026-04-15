@@ -36,8 +36,25 @@ body {
 
 .logo {
   border-radius: 20%;
-  margin-top: 50px;
+  margin-top: 10%;
   width: 100px;
+  box-shadow: 0 0 10px #4890fc;
+  border: 5px solid transparent;
+
+  background: linear-gradient(black, black) padding-box,
+    linear-gradient(90deg, #00f0ff, #4890fc, #7f5af0, #00f0ff) border-box;
+  background-size: 100% 100%, 300% 300%;
+  animation: moveBorder 1.5s infinite;
+}
+
+@keyframes moveBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
 }
 
 .all-icons {
@@ -45,13 +62,14 @@ body {
   height: 60px;
 }
 
-.name1,.name2 {
+.name1,
+.name2 {
   margin: 0;
   padding: 0;
   line-height: 1;
   color: #4890fc;
   font-family: poppins;
-  text-shadow: 0px 5px 8px  rgb(56, 46, 46);
+  text-shadow: 0px 5px 8px rgb(56, 46, 46);
 }
 
 .names {
@@ -66,7 +84,8 @@ body {
   margin: 20px 10px;
 }
 
-.tagline1,.tagline2 {
+.tagline1,
+.tagline2 {
   color: #cdbdfc;
   font-size: 18px;
   font-family: Gill Sans MT;
@@ -98,14 +117,17 @@ section {
   background-color: rgba(199, 188, 188, 0.4);
   border-radius: 20px;
 }
-section:hover{
-  transform: scale(1.05);
+
+section:hover {
+  transform: scale(1.1);
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 1px 1px rgb(56, 46, 46);
 }
 
 .icon {
   border-radius: 30%;
+  width: 58px;
+  margin: 5px;
 }
 
 .icon-text {
@@ -130,26 +152,31 @@ footer {
   filter: invert(100%);
 }
 
-.address,.contact{
+.address,
+.contact {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-family: roboto;
   font-weight: 700;
-  padding:10px;
+  padding: 10px;
 }
-.address:hover,.contact:hover{
+
+.address:hover,
+.contact:hover {
   transform: scale(1.1);
   transition: all 0.1s ease-in-out;
   box-shadow: 0px 1px 1px rgb(56, 46, 46);
   border-radius: 20px;
-  background-color:#3b2d74;
-  text-decoration:underline rgb(217, 208, 208);
+  background-color: #3b2d74;
+  text-decoration: underline rgb(217, 208, 208);
 }
+
 .address>a {
   color: #c2bfcc;
   font-size: 15px;
 }
+
 .contact>p {
   color: #c9c4d7;
   font-size: 15px;
@@ -197,22 +224,27 @@ footer {
   }
 
   section {
-    min-width:60%;
+    width: 60%;
+    min-width: 60%;
     align-items: center;
-    margin:10px auto;
+    margin: 10px auto;
   }
-  .icon{
-    width:20%;
+
+  .icon {
+    width: 20%;
+
   }
-  .icon-text{
-    font-size:15px;
+
+  .icon-text {
+    font-size: 12px;
   }
 
   footer {
     align-items: center;
   }
 
-  .address, .contact {
+  .address,
+  .contact {
     justify-content: center;
   }
 }
